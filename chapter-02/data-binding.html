@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Vue.js Pet Depot</title>
+    <script src="https://unpkg.com/vue"></script>  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1 v-text="sitename"></h1>
+      </header>
+    </div>
+<script type="text/javascript">
+      var webstore = new Vue({
+        el: '#app', // <=== Don't forget this comma!
+        data: {	//#C
+          sitename: 'Vue.js 애견샵'	//#D
+        }	//#C
+      });
+    </script>
+  </body>
+</html>
