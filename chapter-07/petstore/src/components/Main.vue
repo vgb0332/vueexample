@@ -19,7 +19,7 @@
           v-on:click="addToCart(product)"
           v-if="canAddToCart(product)">장바구니 담기</button>
           <button disabled="true" class=" btn btn-primary btn-lg"
-          v-else >Add to cart</button>
+          v-else >장바구니 담기</button>
           <span class="inventory-message"
           v-if="product.availableInventory - cartCount(product.id) === 0">품절!
         </span>
