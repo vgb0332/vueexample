@@ -7,11 +7,11 @@
 <body>
   <div id="app">
     <p>
-      Area is equal to: {{ area }}
+      넓이: {{ area }}
     </p>
     <p>
-      <button v-on:click="세로 += 1">Add length</button>
-      <button v-on:click="가로 += 1">Add width</button>
+      <button v-on:click="length += 1">세로 추가</button>
+      <button v-on:click="width += 1">가로 추가</button>
     </p>
   </div>
   <script type="text/javascript">
@@ -48,7 +48,7 @@
       },
       beforeUpdate: function() {
         console.log('데이터 변경은 '
-                    + '결괏값 변경 이전에 이루어졌습니다.');  
+                    + '결괏값 변경 이전에 이루어졌습니다.');
       }
     });
   </script>
