@@ -1,4 +1,4 @@
 <button class="default"
   v-on:click="addToCart">
-  Add to cart
-</button>        
+  장바구니 담기
+</button>
