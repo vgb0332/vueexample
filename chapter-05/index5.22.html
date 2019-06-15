@@ -202,7 +202,7 @@
           sendGift: '선물로 보내기',
           dontSendGift: '선물로 보내기 않기'
         },
-        products: {},
+        products: [],
         cart: []
       },
       methods: {
@@ -219,18 +219,18 @@
           alert('제출완료');
         },
         canAddToCart(aProduct) {
-          //return this.product.availableInventory > this.cartItemCount;
           return aProduct.availableInventory > this.cartCount(aProduct.id);
         },
         cartCount(id) {
           let count = 0;
-          for (var i = 0; i < this.cart.length; i++) {
+          for(var i = 0; i < this.cart.length; i++) {
             if (this.cart[i] === id) {
               count++;
             }
           }
           return count;
         }
+
       },
       computed: {
         cartItemCount() {
