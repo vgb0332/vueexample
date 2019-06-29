@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-info">
-          <div class="panel-heading">애완 샵 체크아웃</div>
+          <div class="panel-heading">애완용품샵 체크아웃</div>
           <div class="panel-body">
             <div class="form-group">
               <div class="col-md-12">
@@ -125,7 +125,7 @@ export default {
         city: '',
         zip: '',
         state: '',
-        method: '자택 주소',
+        method: '자택',
         business: '직장 주소',
         home: '자택 주소',
         gift:'선물로 보내기',
