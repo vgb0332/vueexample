@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Vue.js 애견샵</title>
+  <title>Vue.js 애완용품샵</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/app.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -35,14 +35,14 @@
           <button class=" btn btn-primary btn-lg"
             v-on:click="addToCart"
             v-if="canAddToCart">장바구니 담기</button>
-            <button disabled="true" class=" btn btn-primary btn-lg"
-              v-else >장바구니 담기</button>
+          <button disabled="true" class=" btn btn-primary btn-lg"
+            v-else >장바구니 담기</button>
         </div>
       </div>
       <div v-else>
         <div class="col-md-10 col-md-offset-1">
           <div class="panel panel-info">
-            <div class="panel-heading">애견샵 체크아웃</div>
+            <div class="panel-heading">애완용품샵 체크아웃</div>
             <div class="panel-body">
               <div class="form-group">
                 <div class="col-md-12">
@@ -148,7 +148,7 @@
     var webstore = new Vue({
       el: '#app',
       data: {
-        sitename: "Vue.js 애견샵",
+        sitename: "Vue.js 애완용품샵",
         showProduct: true,
         a: false,
         states: {
@@ -165,7 +165,7 @@
           city: '',
           zip: '',
           state: '',
-          method: '자택 주소',
+          method: '자택',
           business: '직장 주소',
           home: '자택 주소',
           gift:'선물로 보내기',
@@ -202,64 +202,64 @@
         }
       },
       filters: {
-        formatPrice(price) {	//#B
-          if (!parseInt(price)) { return ""; }	//#C
+        formatPrice(price) {
+          if (!parseInt(price)) { return ""; }
           if (price > 99999) {	//#D
-            var priceString = (price / 100).toFixed(2);	//#E
-            var priceArray = priceString.split("").reverse();	//#F
-            var index = 3;	//#F
-            while (priceArray.length > index + 3) {	//#F
-              priceArray.splice(index+3, 0, ",");	//#F
-              index += 4;	//#F
+            var priceString = (price / 100).toFixed(2);
+            var priceArray = priceString.split("").reverse();
+            var index = 3;
+            while (priceArray.length > index + 3) {
+              priceArray.splice(index+3, 0, ",");
+              index += 4;
             }	//#F
-            return "$" + priceArray.reverse().join("");	//#G
+            return "$" + priceArray.reverse().join("");
           } else {
-            return "$" + (price / 100).toFixed(2);	//#H
+            return "$" + (price / 100).toFixed(2);
           }
         }
 
       },
-      beforeCreate: function() {	//#B
-    if (APP_LOG_LIFECYCLE_EVENTS) {	//#B
-      console.log("beforeCreate");	//#B
-    }	//#B
-  },	//#B
-  created: function() {	//#C
-    if (APP_LOG_LIFECYCLE_EVENTS) {	//#C
-      console.log("created");	//#C
-    }	//#C
-  },	//#C
-  beforeMount: function() {	//#D
-    if (APP_LOG_LIFECYCLE_EVENTS) {	//#D
-      console.log(" beforeMount");	//#D
-    }	//#D
-  },	//#D
-  mounted:  function() {	//#E
-    if (APP_LOG_LIFECYCLE_EVENTS) {	//#E
-      console.log(" mounted"); 	//#E
-    } 	//#E
-  },	//#E
-  beforeUpdate:  function() { 	//#F
-    if (APP_LOG_LIFECYCLE_EVENTS) { 	//#F
-      console.log("beforeUpdate"); 	//#F
-    } 	//#F
-  },	//#F
-  updated:  function() { 	//#G
-    if (APP_LOG_LIFECYCLE_EVENTS) { 	//#G
-      console.log("updated"); 	//#G
-    } 	//#G
-  },	//#G
-  beforeDestroyed:  function() { 	//#H
-    if (APP_LOG_LIFECYCLE_EVENTS) { 	//#H
-      console.log("beforeDestroyed "); 	//#H
-    } 	//#H
-  },	//#H
-  destroyed:  function() { 	//#I
-    if (APP_LOG_LIFECYCLE_EVENTS) { 	//#I
-      console.log("destroyed"); 	//#I
-    } 	//#I
-  }	//#I
-});
+      beforeCreate: function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log("beforeCreate");
+        }
+      },
+      created: function() {	//#C
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log("created");
+        }
+      },
+      beforeMount: function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log(" beforeMount");
+        }
+      },
+      mounted:  function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log(" mounted");
+        }
+      },
+      beforeUpdate:  function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log("beforeUpdate");
+        }
+      },
+      updated:  function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log("updated");
+        }
+      },
+      beforeDestroyed:  function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log("beforeDestroyed ");
+        }
+      },
+      destroyed:  function() {
+        if (APP_LOG_LIFECYCLE_EVENTS) {
+          console.log("destroyed");
+        }
+      }
+    });
 
     </script>
   </body>

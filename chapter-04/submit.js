@@ -1,6 +1,6 @@
 methods: {
   submitForm() {
-    alert('Submitted');
+    alert('제출완료');
 …
   }
 },

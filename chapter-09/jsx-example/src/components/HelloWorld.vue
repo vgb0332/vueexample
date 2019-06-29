@@ -12,7 +12,7 @@ export default {
   },
   data () {
     return {
-      welcome: 'Hello World ',
+      welcome: '안녕하세요 ',
       msg: `<h${this.header}>Hello World ${this.name}</h${this.header}>`,
     }
   },

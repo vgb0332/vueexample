@@ -5,7 +5,7 @@ order: {
   city: '',
   zip: '',
   state: '',
-  method: '자택 주소',
+  method: '자택',
   business: '직장 주소',
   home: '자택 주소',
   gift:'',

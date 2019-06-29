@@ -17,9 +17,9 @@
         </p>
         <button class=" btn btn-primary btn-lg"
                 v-on:click="addToCart(product)"
-                v-if="canAddToCart(product)">Add to cart</button>
+                v-if="canAddToCart(product)">장바구니 담기</button>
         <button disabled="true" class=" btn btn-primary btn-lg"
-                                v-else >Add to cart</button>
+                                v-else >장바구니 담기</button>
         <transition name="bounce" mode="out-in">
           <span class="inventory-message"
                 v-if="product.availableInventory - cartCount(product.id) === 0"
@@ -32,7 +32,7 @@
             Only {{product.availableInventory - cartCount(product.id)}} left!
           </span>
           <span class="inventory-message"
-                v-else key="">Buy Now!
+                v-else key="">지금 구매하세요!
           </span>
         </transition>
         <div class="rating">

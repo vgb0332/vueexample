@@ -22,7 +22,7 @@ export default {
   name: 'my-header',
   data () {
     return {
-    sitename: "Vue.js 애완 샵",
+    sitename: "Vue.js 애완용품샵",
     }
   },
   props: ['cartItemCount'],
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!— CSS 범위 지정을 위해 해당 컴포넌트에만 “scoped” 속성을 추가하세요 -->
 <style scoped>
 a {
   text-decoration: none;

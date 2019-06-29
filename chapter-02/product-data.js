@@ -1,5 +1,5 @@
 data: {
-  sitename: "Vue.js 애견샵",
+  sitename: "Vue.js 애완용품샵",
   product: {
     id: 1001,
     title: "고양이 사료, 25파운드",

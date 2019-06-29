@@ -22,7 +22,7 @@ export default {
   name: 'my-header',
   data () {
     return {
-    sitename: "Vue.js 애완 샵",
+    sitename: "Vue.js 애완용품샵",
     }
   },
   props: ['cartItemCount'],

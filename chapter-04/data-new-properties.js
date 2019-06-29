@@ -1,5 +1,5 @@
 data: {
-  sitename: "Vue.js 애견샵",
+  sitename: "Vue.js 애완용품샵",
   showProduct: true,
   order: {
     firstName: '',
